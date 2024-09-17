@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:import/recommended",
+    // the following lines do the trick
+    "plugin:import/typescript"
+  ],
+  "settings": {
+    "import/core-modules": ["remote/Test"]
+  }
+}
