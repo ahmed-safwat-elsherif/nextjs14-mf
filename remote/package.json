@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "rm -rf .next && cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3001",
-    "build": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
-    "start": "cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next start -p 3001",
+    "dev": "rm -rf .next && npx cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3001",
+    "dev:no-mf": "rm -rf .next && npx cross-env NEXT_NO_MF=true next dev -p 3001",
+    "build": "npx cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
+    "start": "npx cross-env NEXT_PRIVATE_LOCAL_WEBPACK=true next start -p 3001",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@module-federation/nextjs-mf": "^8.5.3",
+    "@mui/material": "^6.1.0",
+    "i18next": "^23.15.1",
     "next": "14.2.11",
+    "next-i18next": "^15.3.1",
     "react": "^18",
     "react-dom": "^18",
     "webpack": "^5.94.0"
